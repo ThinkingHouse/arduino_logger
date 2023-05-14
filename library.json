@@ -19,7 +19,7 @@
     "license": "MIT",
     "homepage": "https://thinking-house.ru",
     "dependencies": { 
-        "featherfly/SoftwareSerial": "~1.0"
+        "featherfly/SoftwareSerial": "^1.0"
     },
     "frameworks": "arduino",
     "platforms": "*"

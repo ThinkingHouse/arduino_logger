@@ -12,7 +12,6 @@
 
 //! Подключение заголовочных файлов
 #include "arduino_logger.h"
-#include <SoftwareSerial.h>
 
 //! Макроопределения
 
@@ -81,10 +80,6 @@ bool logInit(log_out_type_t output, int serial_tx_pin, int serial_rx_pin, int32_
     else if ( output_type == LOG_TO_SERIAL_1 )
     {
         Serial1.begin(serial_baund);
-    }
-    else if ( output_type == LOG_TO_SOFTWARE_SERIAL )
-    {
-      
     }
     else
     {

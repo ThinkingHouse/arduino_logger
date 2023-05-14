@@ -32,7 +32,6 @@ typedef enum
     LOG_TO_NONE,
     LOG_TO_SERIAL,
     LOG_TO_SERIAL_1,
-    LOG_TO_SOFTWARE_SERIAL,
     LOG_TO_SD_CARD
 } log_out_type_t;
 
