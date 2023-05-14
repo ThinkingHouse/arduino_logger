@@ -25,7 +25,7 @@ typedef enum
     LOG_LEVEL_INFO,
     LOG_LEVEL_WARNING,
     LOG_LEVEL_ERROR
-}log_level_t;
+} log_level_t;
 
 typedef enum
 {
@@ -34,7 +34,7 @@ typedef enum
     LOG_TO_SERIAL_1,
     LOG_TO_SOFTWARE_SERIAL,
     LOG_TO_SD_CARD
-}log_out_type_t;
+} log_out_type_t;
 
 bool logInit();  
 bool logInit(int32_t serial_baund);
@@ -44,4 +44,6 @@ void logInfoSend(String format, ...);
 void logInfoSend(char *format, ...);
 void logWarningSend(char *format, ...);
 void logErrorSend(char *format, ...);
+void logOff();
+void logOn();
 #endif
