@@ -1,6 +1,6 @@
 {
     "name": "arduino_logger",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Logging data for Arduino, ESP",
     "keywords": "logger",
     "repository":
