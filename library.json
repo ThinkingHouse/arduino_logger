@@ -1,6 +1,6 @@
 {
     "name": "arduino_logger",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "Logging data for Arduino, ESP",
     "keywords": "logger",
     "repository":
@@ -18,8 +18,6 @@
     ],
     "license": "MIT",
     "homepage": "https://thinking-house.ru",
-    "dependencies": {
-    },
     "frameworks": "arduino",
     "platforms": "*"
   }
