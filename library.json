@@ -1,0 +1,26 @@
+{
+    "name": "arduino_logger",
+    "version": "0.1.0",
+    "description": "Logging data for Arduino, ESP",
+    "keywords": "logger",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/ThinkingHouse/arduino_logger.git"
+    },
+    "authors":
+    [
+      {
+        "name": "Andrey Alekseev",
+        "email": "andrey@thinking-house.ru",
+        "url": "https://thinking-house.ru"
+      }
+    ],
+    "license": "MIT",
+    "homepage": "https://thinking-house.ru",
+    "dependencies": {
+
+    },
+    "frameworks": "*",
+    "platforms": "*"
+  }

@@ -11,7 +11,7 @@
  */
 
 //! Подключение заголовочных файлов
-#include "logger.h"
+#include "arduino_logger.h"
 #include <SoftwareSerial.h>
 
 //! Макроопределения
@@ -26,6 +26,8 @@ int8_t spi_miso_pin = 0;
 int32_t sd_card_size = 0;
 
 log_out_type_t output_type = LOG_TO_NONE;
+
+bool isLogEnable = true;
 
 //! Локальные функции
 
@@ -101,6 +103,11 @@ bool logInit(log_out_type_t output, int spi_sck_pin, int spi_mosi_pin, int spi_m
 
 void logInfoSend(String format, ...)
 {
+    if (!isLogEnable)
+    {
+        return;
+    }
+
     va_list ap;                     //Указатель на список параметров
     va_start(ap,format);                 //Настроились на список параметров
     String output_message = "INFO  ::: ";
@@ -137,6 +144,11 @@ void logInfoSend(String format, ...)
 
 void logInfoSend(char *format, ...)
 {
+    if (!isLogEnable)
+    {
+        return;
+    }
+
     va_list ap;                     //Указатель на список параметров
     va_start(ap,format);                 //Настроились на список параметров
     String output_message = "INFO  ::: ";
@@ -173,6 +185,11 @@ void logInfoSend(char *format, ...)
 
 void logWarningSend(char *format, ...)
 {
+    if (!isLogEnable)
+    {
+        return;
+    }
+
     va_list ap;                     //Указатель на список параметров
     va_start(ap,format);                 //Настроились на список параметров
     String output_message = "WARN  ::: ";
@@ -209,6 +226,11 @@ void logWarningSend(char *format, ...)
 
 void logErrorSend(char *format, ...)
 {
+    if (!isLogEnable)
+    {
+        return;
+    }
+    
     va_list ap;                     //Указатель на список параметров
     va_start(ap,format);                 //Настроились на список параметров
     String output_message = "ERROR ::: ";
@@ -241,4 +263,14 @@ void logErrorSend(char *format, ...)
     va_end(ap); //Завершаем работу с макрокомандами
 
     send_to_serial_1(output_message);
+}
+
+void logOff()
+{
+    isLogEnable = false;
+}
+
+void logOn()
+{
+    isLogEnable = true;
 }
