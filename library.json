@@ -18,8 +18,8 @@
     ],
     "license": "MIT",
     "homepage": "https://thinking-house.ru",
-    "dependencies": {
-
+    "dependencies": { 
+        "featherfly/SoftwareSerial": "^1.0"
     },
     "frameworks": "*",
     "platforms": "*"
